@@ -1,0 +1,774 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy&display=swap');
+body {
+    background: rgb(235, 235, 235);
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow: hidden;
+}
+
+section {
+    display: block;
+    max-width: 100%;
+    min-height: 100vh;
+}
+
+header {
+    width: 100%;
+    /*
+    height: 100vh;
+    background: url(../image/philosophy.jpg) no-repeat 50% 50%;
+    */
+    background-size: cover;
+}
+
+.logo {
+    line-height: 60px;
+    position: fixed;
+    float: left;
+    margin-left: 60px;
+    margin-top: 25px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.logo img {
+    max-height: 7vh;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    line-height: 60px;
+    z-index: 100;
+}
+
+nav ul {
+    line-height: 60px;
+    list-style: none;
+    background: rgba(0, 0, 0, 0);
+    overflow: hidden;
+    color: #fff;
+    padding: 0;
+    text-align: right;
+    margin: 0;
+    padding-right: 40px;
+    transition: 1s;
+}
+
+nav.black ul {
+    background: #000;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 16px 40px;
+    ;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+}
+
+.menu-icon {
+    line-height: 60px;
+    width: 100%;
+    background: #000;
+    text-align: right;
+    box-sizing: border-box;
+    padding: 15px 24px;
+    cursor: pointer;
+    color: #fff;
+    display: none;
+}
+
+#main-slider {
+    overflow-y: hidden;
+    max-height: 50rem;
+}
+
+#carouselExampleFade {
+    max-height: 100%;
+}
+
+.carousel-inner {
+    position: relative;
+    height: 100%;
+}
+
+.carousel-item {
+    max-height: 100%;
+}
+
+.corousel-inner img {
+    height: 100%;
+    width: 100%;
+}
+
+#main-slider a {
+    max-height: 80rem;
+}
+
+#main-slider img {
+    max-height: 100vh;
+}
+
+#presention {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    overflow-y: hidden;
+}
+
+.presention-card {
+    max-width: 25em;
+    border: solid rgb(175, 175, 175) 1px;
+    border-radius: 10px;
+}
+
+.present-header {
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgb(175, 175, 175);
+    padding: 2em;
+    width: 100%;
+    height: 100%;
+    font-weight: bolder;
+}
+
+.present-header h3 {
+    padding-right: 0;
+}
+
+.present-cont-head {
+    text-align: center;
+    padding: 2em 2em 0 2em;
+}
+
+.present-cont-head:first-letter {
+    text-transform: capitalize;
+}
+
+.present-content {
+    padding: 2em 2em 2em 2em;
+}
+
+#map {
+    position: relative;
+}
+
+#map img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+#contents {
+    display: flex;
+    align-items: center;
+}
+
+#tab-content {
+    display: flex;
+    align-items: center;
+}
+
+.top-zigzag,
+.bottom-zigzag {
+    background: red;
+    background-image: url('../image/zigzag2.png');
+}
+
+#footer {
+    background-color: black;
+    color: white;
+}
+
+#footer-logo img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 75%;
+    width: 75%;
+}
+
+#footer-first-row {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+#footer-first-row,
+#footer-second-row {
+    margin: 4rem;
+}
+
+#social-media-header {
+    border-bottom: 4px white solid;
+}
+
+.social-media-btn a {
+    text-decoration: none;
+    color: white;
+}
+
+.social-link {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.social-media-btn a:hover {
+    /*color: #     ;*/
+    color: rgb(13, 110, 253);
+}
+
+#footer-second-row {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+#footer-second-row h4 {
+    color: white;
+    border-bottom: 4px white solid;
+}
+
+.contact-info {
+    padding: 1em;
+    float: left;
+}
+
+.contact-info-cont {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.contact-info-cont p,
+i {
+    margin-left: 1rem;
+}
+
+.touch {
+    margin-top: 1rem;
+}
+
+.touch button {
+    float: right;
+}
+
+.signature {
+    margin-top: 2rem;
+}
+
+.signature a {
+    color: white;
+}
+
+.signature a:hover {
+    color: grey;
+}
+
+@media(max-width:768px) {
+    #presention {
+        margin-top: -20rem !important;
+        padding-top: 0;
+    }
+    .social-link {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+    }
+    .presention-card {
+        margin: 5rem;
+        width: 25rem;
+    }
+    #footer-second-row {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .logo {
+        position: fixed;
+        top: 0;
+        margin-top: 16px;
+    }
+    nav ul {
+        max-height: 0px;
+        background: #000;
+    }
+    nav.black ul {
+        background: #000;
+    }
+    .showing {
+        max-height: 34em;
+    }
+    nav ul li {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 24px;
+        text-align: center;
+    }
+    .menu-icon {
+        display: block;
+    }
+    #main-slider {
+        margin-top: 5.5rem;
+        overflow-y: hidden;
+    }
+    #main-slider img {
+        min-height: 60vh;
+        max-height: 60vh;
+    }
+    .column-order:nth-child(1) {
+        order: 2;
+    }
+    .column-order:nth-child(2) {
+        order: 1;
+    }
+}
+
+@media(max-width: 900px) {
+    #presention {
+        flex-direction: column;
+        margin: 5rem;
+    }
+}
+
+@media (max-width:595px) {
+    #address {
+        margin-top: -20px;
+    }
+}
+
+@media (max-width:1493px) {
+    #address {
+        margin-top: -20px;
+    }
+}
+
+.slope-up {
+    height: 5rem;
+    background: #062A5F;
+    clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
+}
+
+.slope-down {
+    background: #062A5F;
+    height: 5rem;
+    clip-path: polygon(100% 0, 0 0, 0 100%);
+}
+
+.general-word {
+    display: block;
+    height: 30rem;
+    width: 100%;
+    background: #062A5F;
+    color: white;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    overflow-y: hidden;
+    clip-path: polygon(0 30%, 100% 0, 100% 70%, 0% 100%);
+}
+
+.general-word img {
+    margin-top: 2rem;
+    max-width: 100%;
+    max-height: 75%;
+    color: white;
+    z-index: 12;
+}
+
+.word {
+    font-family: 'Sorts Mill Goudy', serif;
+    max-height: 100%;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+.w-trailer {
+    text-align: center;
+    margin-top: 35%;
+    margin-bottom: auto;
+}
+
+.w-trailer p {
+    margin: 1rem;
+    float: right;
+    font-weight: 650;
+}
+
+#first-quotes {
+    text-align: end;
+    margin-top: 35%;
+    font-size: 800%;
+}
+
+#second-quotes {
+    padding-left: 2rem;
+    text-align: start;
+    margin-top: 80%;
+    font-size: 800%;
+    overflow-y: hidden;
+}
+
+@media(max-width: 1800px) {
+    .w-trailer {
+        text-align: center;
+        margin-top: 40%;
+        margin-bottom: auto;
+    }
+    .w-trailer p {
+        margin: 1rem;
+        float: right;
+        font-weight: 650;
+    }
+    #first-quotes {
+        text-align: end;
+        margin-top: 40%;
+        font-size: 800%;
+    }
+    #second-quotes {
+        padding-left: 2rem;
+        text-align: start;
+        margin-top: 85%;
+        font-size: 800%;
+        overflow-y: hidden;
+    }
+}
+
+@media(max-width: 1600px) {
+    .w-trailer {
+        text-align: center;
+        margin-top: 45%;
+        margin-bottom: auto;
+    }
+    .w-trailer p {
+        margin: 1rem;
+        float: right;
+        font-weight: 650;
+    }
+    #first-quotes {
+        text-align: end;
+        margin-top: 45%;
+        font-size: 800%;
+    }
+    #second-quotes {
+        padding-left: 2rem;
+        text-align: start;
+        margin-top: 90%;
+        font-size: 800%;
+        overflow-y: hidden;
+    }
+}
+
+@media(max-width: 1300px) {
+    .w-trailer {
+        text-align: center;
+        margin-top: 50%;
+        margin-bottom: auto;
+    }
+    .w-trailer p {
+        margin: 1rem;
+        float: right;
+        font-weight: 650;
+    }
+    #first-quotes {
+        text-align: end;
+        margin-top: 50%;
+        font-size: 800%;
+    }
+    #second-quotes {
+        padding-left: 2rem;
+        text-align: start;
+        margin-top: 95%;
+        font-size: 800%;
+        overflow-y: hidden;
+    }
+}
+
+@media(max-width: 1100px) {
+    .w-trailer {
+        text-align: center;
+        margin-top: 60%;
+        margin-bottom: auto;
+    }
+    #first-quotes {
+        text-align: end;
+        margin-top: 60%;
+        font-size: 800%;
+    }
+    #second-quotes {
+        padding-left: 2rem;
+        text-align: start;
+        margin-top: 105%;
+        font-size: 800%;
+        overflow-y: hidden;
+    }
+}
+
+@media(max-width: 992px) {
+    .w-trailer {
+        text-align: center !important;
+        margin-top: 65% !important;
+        margin-bottom: auto !important;
+    }
+    #first-quotes {
+        text-align: end !important;
+        margin-top: 65% !important;
+        font-size: 800% !important;
+    }
+    #second-quotes {
+        padding-left: 2rem !important;
+        text-align: start !important;
+        margin-top: 110% !important;
+        font-size: 800% !important;
+        overflow-y: hidden !important;
+    }
+}
+
+@media(max-width: 900px) {
+    .w-trailer {
+        text-align: center !important;
+        margin-top: 80% !important;
+        margin-bottom: auto !important;
+    }
+    #first-quotes {
+        text-align: end !important;
+        margin-top: 80% !important;
+        font-size: 800% !important;
+    }
+    #second-quotes {
+        padding-left: 2rem !important;
+        text-align: start !important;
+        margin-top: 125%!important;
+        font-size: 800% !important;
+        overflow-y: hidden !important;
+    }
+}
+
+@media(max-width: 800px) {
+    .w-trailer {
+        text-align: center !important;
+        margin-top: 90% !important;
+        margin-bottom: auto !important;
+    }
+    #first-quotes {
+        text-align: end !important;
+        margin-top: 90% !important;
+        font-size: 800% !important;
+    }
+    #second-quotes {
+        padding-left: 2rem !important;
+        text-align: start !important;
+        margin-top: 135% !important;
+        font-size: 800% !important;
+        overflow-y: hidden !important;
+    }
+}
+
+@media(max-width: 700px) {
+    .w-trailer {
+        text-align: center !important;
+        margin-top: 100% !important;
+        margin-bottom: auto !important;
+    }
+    #first-quotes {
+        text-align: end !important;
+        margin-top: 100% !important;
+        font-size: 800% !important;
+    }
+    #second-quotes {
+        padding-left: 2rem !important;
+        text-align: start !important;
+        margin-top: 145% !important;
+        font-size: 800% !important;
+        overflow-y: hidden !important;
+    }
+}
+
+@media(max-width: 600px) {
+    .w-trailer {
+        text-align: center !important;
+        margin-top: 110% !important;
+        margin-bottom: auto !important;
+    }
+    #first-quotes {
+        text-align: end !important;
+        margin-top: 110% !important;
+        font-size: 800% !important;
+    }
+    #second-quotes {
+        padding-left: 2rem !important;
+        text-align: start !important;
+        margin-top: 155% !important;
+        font-size: 800% !important;
+        overflow-y: hidden !important;
+    }
+}
+
+@media(max-width: 500px) and (min-width:500px) {
+    .w-trailer {
+        overflow-y: hidden !important;
+        text-align: center !important;
+        margin-top: 200% !important;
+        margin-bottom: auto !important;
+    }
+    #first-quotes {
+        overflow-y: hidden !important;
+        text-align: end !important;
+        margin-top: 120% !important;
+        font-size: 800% !important;
+    }
+    #second-quotes {
+        overflow-y: hidden !important;
+        padding-left: 2rem !important;
+        text-align: start !important;
+        margin-top: 165% !important;
+        font-size: 800% !important;
+        overflow-y: hidden !important;
+    }
+}
+
+@media (max-width:576px) {
+    .social-link {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    #address {
+        margin-top: -18px;
+    }
+}
+
+.article {
+    display: grid;
+    grid-template-columns: 1fr 10fr 1fr;
+}
+
+.wrapper {
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    max-height: 100%;
+}
+
+.content-header {
+    border-bottom: 1px solid;
+    padding: 2rem;
+    width: 100%;
+}
+
+.content-header h1 {
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.article-content {
+    padding: 2rem;
+}
+
+.article-content p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 22;
+    -webkit-box-orient: vertical;
+}
+
+.article-content h5 {
+    text-align: center;
+}
+
+.read-more {
+    float: right;
+}
+
+.read-more a {
+    text-decoration: none;
+    color: black;
+}
+
+.read-more a:hover {
+    text-decoration: underline;
+}
+
+#separator {
+    border: 2px solid white;
+    width: 100%;
+}
+
+.holding-image {
+    display: flex;
+    justify-content: space-around;
+    height: 40rem;
+    width: 100%;
+    background-image: url(../image/parthenon.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.holding-image img {
+    max-height: 50%;
+    max-width: 50%;
+    margin-top: 10rem;
+}
+
+.holding-image h1 {
+    margin-top: 15rem;
+    margin-left: -40rem;
+    font-family: 'Kaushan Script', cursive;
+    font-weight: bolder;
+    color: rgb(13, 110, 253);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+@media(max-width: 1200px) {
+    .social-media-btn {
+        font-size: 75%;
+    }
+    .social-link {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+    }
+    .w-trailer {
+        text-align: center;
+        margin-top: 55%;
+        margin-bottom: auto;
+    }
+    #first-quotes {
+        text-align: end;
+        margin-top: 55%;
+        font-size: 800%;
+    }
+    #second-quotes {
+        padding-left: 2rem;
+        text-align: start;
+        margin-top: 100%;
+        font-size: 800%;
+        overflow-y: hidden;
+    }
+}
