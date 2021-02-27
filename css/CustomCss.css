@@ -10,6 +10,7 @@
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300&display=swap');
 body {
     background: rgb(235, 235, 235);
     padding: 0;
@@ -235,6 +236,10 @@ nav ul li a:hover {
     overflow-y: hidden;
     padding: 5rem;
     overflow-y: hidden;
+    background-image: url("../image/castle-ripped.jpg"), url("../image/discovery-ripped.jpg");
+    background-repeat: no-repeat;
+    background-size: 30%;
+    background-position: 17%, 83%;
 }
 
 #start-card {
@@ -247,7 +252,14 @@ nav ul li a:hover {
     -webkit-animation: slideInFromRight .5s ease-in;
 }
 
+.presention-card a {
+    color: #212529;
+    text-decoration: none;
+}
+
 .presention-card {
+    background-color: rgb(255, 255, 255);
+    opacity: 0.7;
     border: solid rgb(175, 175, 175) 1px;
     border-radius: 10px;
     max-width: 25rem;
@@ -255,6 +267,20 @@ nav ul li a:hover {
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    transition: opacity .3s !important;
+    -webkit-transition: opacity .3s !important;
+    -moz-transition: opacity .3s !important;
+    -ms-transition: opacity .3s !important;
+    -o-transition: opacity .3s !important;
+}
+
+.presention-card:hover {
+    color: #212529;
+    opacity: 0.8;
+}
+
+.presention-card:hover a {
+    color: #212529;
 }
 
 .present-header {
@@ -481,6 +507,9 @@ svg path {
 .contact-info {
     padding: 1em;
     float: left;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .contact-info-cont {
@@ -488,15 +517,23 @@ svg path {
     align-items: center;
     justify-content: flex-start;
     flex-direction: row;
-    flex-wrap: wrap;
     text-align: center;
     gap: 1rem;
+    height: auto;
 }
 
 .contact-info-cont p {
     text-align: left;
     margin: 0;
     white-space: wrap;
+}
+
+.contact-info-cont a {
+    color: white;
+}
+
+.contact-info-cont a:hover {
+    color: grey;
 }
 
 .touch {
@@ -509,14 +546,6 @@ svg path {
 
 .signature {
     margin-top: 2rem;
-}
-
-.signature a {
-    color: white;
-}
-
-.signature a:hover {
-    color: grey;
 }
 
 .slope-up {
@@ -586,7 +615,57 @@ svg path {
 }
 
 .article {
-    margin: 4rem;
+    margin: 0 4rem 0 4rem;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+}
+
+.article .content-header h1 {
+    color: white;
+}
+
+#ow-head,
+#nw-head {
+    text-align: center;
+    text-decoration: underline;
+}
+
+#africa-article .content-header {
+    background-image: linear-gradient(100deg, #00000088 0%, #ffffff66 100%), url("../image/africa.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#asia-article .content-header {
+    background-image: linear-gradient(100deg, #00000088 0%, #ffffff66 100%), url("../image/asia.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#europe-article .content-header {
+    background-image: linear-gradient(100deg, #00000088 0%, #ffffff66 100%), url("../image/galleon.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#oceania-article .content-header {
+    background-image: linear-gradient(100deg, #00000088 0%, #ffffff66 100%), url("../image/oceania.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#south-america-article .content-header {
+    background-image: linear-gradient(100deg, #00000088 0%, #ffffff66 100%), url("../image/south-america.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#north-america-article .content-header {
+    background-image: linear-gradient(100deg, #00000088 0%, #ffffff66 100%), url("../image/nyc.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
 .wrapper {
@@ -595,6 +674,7 @@ svg path {
     margin-top: 5rem;
     margin-bottom: 5rem;
     max-height: 100%;
+    width: 100%;
 }
 
 .content-header {
@@ -806,6 +886,10 @@ svg path {
 }
 
 @media(max-width: 1600px) {
+    #presention {
+        background-size: 35%;
+        background-position: 17%, 83%;
+    }
     .w-trailer {
         text-align: center;
         margin-top: 45%;
@@ -840,6 +924,8 @@ svg path {
     }
 }
 
+@media(max-width:1500px) {}
+
 @media (max-width:1493px) {
     #who-we-r .mid {
         margin: 0;
@@ -859,6 +945,10 @@ svg path {
 }
 
 @media(max-width: 1400px) {
+    #presention {
+        background-size: 36%;
+        background-position: 17%, 83%;
+    }
     .contact-info-cont p {
         width: 300px;
         text-align: left;
@@ -867,6 +957,10 @@ svg path {
 }
 
 @media(max-width: 1300px) {
+    #presention {
+        background-size: 37%;
+        background-position: 17%, 83%;
+    }
     .w-trailer {
         text-align: center;
         margin-top: 50%;
@@ -907,6 +1001,20 @@ svg path {
 }
 
 @media(max-width: 1200px) {
+    #presention {
+        background-size: 38%;
+        background-position: 0%, 100%;
+    }
+    .article {
+        margin: 2rem;
+        display: grid;
+        place-items: center;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    .wrapper {
+        margin: 0;
+    }
     .social-media-btn {
         font-size: 75%;
     }
@@ -1095,9 +1203,15 @@ svg path {
 
 @media(max-width:875px) {
     #presention {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
+        margin: 1rem !important;
+        display: grid;
+        place-items: center;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
+        padding: 0 !important;
+        background-image: url("../image/castle-ripped.jpg");
+        background-size: 100%;
+        background-position: center;
     }
 }
 
@@ -1125,15 +1239,6 @@ svg path {
     #main-slider {
         max-height: 50vh;
     }
-    #presention {
-        margin: 1rem !important;
-        display: flex;
-        justify-content: center !important;
-        align-items: center !important;
-        flex-direction: column;
-        margin: 0 i !important;
-        padding: 0 !important;
-    }
     .social-link {
         display: grid !important;
         grid-template-columns: repeat(3, 1fr) !important;
@@ -1141,7 +1246,6 @@ svg path {
         grid-row-gap: 1rem;
     }
     #start-card {
-        margin-bottom: 1rem;
         animation: slideInFromLeft 1s ease-in;
         -webkit-animation: slideInFromLeft 1s ease-in;
     }
@@ -1384,6 +1488,27 @@ svg path {
 }
 
 @media(max-width: 600px) {
+    #presention {
+        margin: 1rem !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+        padding: 0 !important;
+        background-image: url("../image/castle-ripped.jpg"), url("../image/discovery-ripped.jpg");
+        background-size: 100%;
+        background-position: 30% 15%, 30% 85%;
+    }
+    .presention-card {
+        width: 100%;
+    }
+    .article {
+        margin: 2rem 2rem 0 2rem;
+        display: grid;
+        place-items: center;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
     .w-trailer {
         text-align: center !important;
         margin-top: 160% !important;
