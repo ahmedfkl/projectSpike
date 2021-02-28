@@ -318,6 +318,14 @@ nav ul li a:hover {
     background-color: #104179;
 }
 
+.list-group-item.list-group-item-action.active:hover {
+    background-color: #104179;
+}
+
+.list-group-item.list-group-item-action:hover {
+    background-color: rgb(13, 110, 253);
+}
+
 #map svg {
     height: 800pt;
     ;
@@ -334,18 +342,19 @@ svg path {
 .card {
     position: absolute !important;
     display: none !important;
-    background-color: rgba(235, 235, 235, 0.7) !important;
+    background-color: rgba(235, 235, 235, 0) !important;
     -webkit-box-shadow: -10px 10px 20px -5px #000000;
     box-shadow: -10px 10px 20px -5px #000000;
-    transition: 1s;
-    -webkit-transition: 1s;
-    -moz-transition: 1s;
-    -ms-transition: 1s;
-    -o-transition: 1s;
 }
 
 .card-peak {
     display: block !important;
+    background-color: rgba(235, 235, 235, 0.7) !important;
+    transition: all 1s linear 0s;
+    -webkit-transition: all 1s linear 0s;
+    -moz-transition: all 1s linear 0s;
+    -ms-transition: all 1s linear 0s;
+    -o-transition: all 1s linear 0s;
 }
 
 .card .btn-close {
@@ -428,7 +437,7 @@ svg path {
 }
 
 #tab-content {
-    margin: 20rem 0 20rem 0;
+    margin: 10rem 5rem 10rem 5rem;
     min-height: 400px;
 }
 
@@ -436,8 +445,13 @@ svg path {
     max-height: 40rem;
 }
 
+#tab-content .col-xxl-4 .list-group-item.list-group-item-action {
+    text-align: center;
+}
+
 #tab-content .tab-pane {
     max-height: 25rem;
+    min-height: 25rem;
 }
 
 .top-zigzag,
@@ -529,6 +543,7 @@ svg path {
 }
 
 .contact-info-cont a {
+    display: inline-block;
     color: white;
 }
 
@@ -628,42 +643,72 @@ svg path {
 
 #ow-head,
 #nw-head {
+    display: flex;
+    justify-content: center;
+    margin: 0;
     text-align: center;
     text-decoration: underline;
+    text-decoration-color: #104179;
+    width: 100%;
+    -moz-text-decoration-color: #104179;
+}
+
+#ow-head::before,
+#nw-head::before {
+    display: block;
+    margin-right: 1rem;
+    content: '';
+    min-width: 70vh;
+    max-width: 70vh;
+    min-height: 100%;
+    background-image: linear-gradient(135deg, #104179 27.03%, #ffffff 27.03%, #ffffff 50%, #104179 50%, #104179 77.03%, #ffffff 77.03%, #ffffff 100%);
+    background-size: 52.33px 52.33px;
+}
+
+#ow-head::after,
+#nw-head::after {
+    display: block;
+    margin-left: 1rem;
+    content: '';
+    min-width: 70vh;
+    max-width: 70vh;
+    min-height: 100%;
+    background-image: linear-gradient(135deg, #104179 27.03%, #ffffff 27.03%, #ffffff 50%, #104179 50%, #104179 77.03%, #ffffff 77.03%, #ffffff 100%);
+    background-size: 52.33px 52.33px;
 }
 
 #africa-article .content-header {
-    background-image: linear-gradient(100deg, #00000088 0%, #ffffff66 100%), url("../image/africa.jpg");
+    background-image: linear-gradient(100deg, #00000088 0%, #ffffff66 100%), url("../image/africau.jpg");
     background-size: cover;
     background-position: center;
 }
 
 #asia-article .content-header {
-    background-image: linear-gradient(100deg, #00000088 0%, #ffffff66 100%), url("../image/asia.jpg");
+    background-image: linear-gradient(100deg, #00000088 0%, #ffffff66 100%), url("../image/asiau.jpg");
     background-size: cover;
     background-position: center;
 }
 
 #europe-article .content-header {
-    background-image: linear-gradient(100deg, #00000088 0%, #ffffff66 100%), url("../image/galleon.jpg");
+    background-image: linear-gradient(100deg, #00000088 0%, #ffffff66 100%), url("../image/galleonu.jpg");
     background-size: cover;
     background-position: center;
 }
 
 #oceania-article .content-header {
-    background-image: linear-gradient(100deg, #00000088 0%, #ffffff66 100%), url("../image/oceania.jpg");
+    background-image: linear-gradient(100deg, #00000088 0%, #ffffff66 100%), url("../image/oceaniau.jpg");
     background-size: cover;
     background-position: center;
 }
 
 #south-america-article .content-header {
-    background-image: linear-gradient(100deg, #00000088 0%, #ffffff66 100%), url("../image/south-america.jpg");
+    background-image: linear-gradient(100deg, #00000088 0%, #ffffff66 100%), url("../image/south-americau.jpg");
     background-size: cover;
     background-position: center;
 }
 
 #north-america-article .content-header {
-    background-image: linear-gradient(100deg, #00000088 0%, #ffffff66 100%), url("../image/nyc.jpg");
+    background-image: linear-gradient(100deg, #00000088 0%, #ffffff66 100%), url("../image/nycu.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -691,6 +736,11 @@ svg path {
     font-weight: bolder;
 }
 
+#old-world,
+#new-world {
+    padding: 2rem 0 2rem 0;
+}
+
 .article-content {
     padding: 2rem;
 }
@@ -704,7 +754,31 @@ svg path {
 }
 
 .article-content h5 {
+    display: flex;
+    justify-content: center;
     text-align: center;
+}
+
+.article-content h5::before {
+    content: ' ';
+    margin-right: 1rem;
+    display: block;
+    min-width: 5px;
+    max-width: 5px;
+    min-height: 20px;
+    max-height: 100%;
+    background-color: #104179;
+}
+
+.article-content h5::after {
+    content: ' ';
+    margin-left: 1rem;
+    display: block;
+    min-width: 5px;
+    max-width: 5px;
+    min-height: 20px;
+    max-height: 100%;
+    background-color: #104179;
 }
 
 .read-more {
@@ -843,16 +917,18 @@ svg path {
 
 #who-we-r .bottom .sponsors {
     flex: 1;
-}
-
-.sponsors {
     text-align: center;
+    overflow: hidden;
 }
 
 .owl-carousel .item {
     display: flex;
     align-items: center;
     height: 5rem;
+}
+
+.owl-item {
+    z-index: 500000;
 }
 
 .owl-carousel .item img {
@@ -863,6 +939,7 @@ svg path {
 
 .owl-stage-outer {
     max-height: 5rem;
+    margin-bottom: 0;
 }
 
 @media(max-width: 1800px) {
@@ -1004,6 +1081,9 @@ svg path {
     #presention {
         background-size: 38%;
         background-position: 0%, 100%;
+    }
+    #tab-content {
+        margin: 10rem 2rem 10rem 2rem;
     }
     .article {
         margin: 2rem;
@@ -1345,7 +1425,7 @@ svg path {
         width: 90px;
     }
     .contact-info-cont p {
-        width: 400px;
+        width: 300px;
         text-align: left;
         margin: 0;
     }
@@ -1428,7 +1508,6 @@ svg path {
         display: flex;
         justify-content: center;
         width: auto;
-        margin: 1rem;
         text-indent: 2rem;
         text-align: justify;
         text-justify: inter-word;
@@ -1443,19 +1522,21 @@ svg path {
         margin: 0;
     }
     #who-we-r .bottom .reach-us {
-        flex: 1;
         margin: 1rem 0 1rem 0;
         order: 2;
         text-align: center;
     }
     #who-we-r .bottom .sponsors {
-        flex: 1;
         order: 1;
+    }
+    .owl-carousel .owl-item {
+        max-height: 80px;
     }
     .owl-carousel .item {
         display: flex;
         align-items: center;
-        height: 5rem;
+        max-height: 5rem;
+        min-height: 5rem;
     }
     .owl-carousel .item img {
         margin: auto;
@@ -1463,7 +1544,10 @@ svg path {
         max-width: 5rem;
     }
     .owl-stage-outer {
-        max-height: 5rem;
+        max-height: 80px;
+    }
+    .owl-stage {
+        max-height: 80px;
     }
 }
 

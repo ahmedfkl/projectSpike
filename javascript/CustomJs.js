@@ -30,6 +30,7 @@ $(document).ready(function() {
 });
 
 
+
 /****************NAV******************/
 $(document).ready(function() {
     $(".menu-icon").on("click", function() {
@@ -55,7 +56,7 @@ $(document).ready(function() {
     $("#africa").on("click", function() {
         $("#africa-pop").each(function() {
             $("#africa-pop").toggleClass("card-peak");
-        })
+        });
     });
 });
 $(document).ready(function() {
