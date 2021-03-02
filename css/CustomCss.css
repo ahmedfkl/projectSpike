@@ -256,7 +256,7 @@ nav ul li a:hover {
 
 .presention-card {
     background-color: rgb(255, 255, 255);
-    opacity: 0.7;
+    opacity: 0.9;
     border: solid rgb(175, 175, 175) 1px;
     border-radius: 10px;
     max-width: 25rem;
@@ -273,7 +273,7 @@ nav ul li a:hover {
 
 .presention-card:hover {
     color: #212529;
-    opacity: 0.8;
+    opacity: 1;
 }
 
 .presention-card:hover a {
@@ -347,7 +347,7 @@ svg path {
 
 .card-peak {
     display: block !important;
-    background-color: rgba(235, 235, 235, 0.7) !important;
+    background-color: rgba(235, 235, 235, 0.9) !important;
     transition: all 1s linear 0s;
     -webkit-transition: all 1s linear 0s;
     -moz-transition: all 1s linear 0s;
@@ -359,7 +359,7 @@ svg path {
     position: absolute;
     top: 12px;
     right: 12px;
-    background-color: rgba(16, 65, 121, 0.5);
+    background-color: rgba(16, 65, 121, 0.9);
     z-index: 2;
 }
 
